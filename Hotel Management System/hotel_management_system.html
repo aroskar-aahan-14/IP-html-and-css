@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hotel Management System</title>
+        <link rel="stylesheet" href="hotel_management_system.css">
+    </head>
+    <body>
+        <header class="header">
+            <h1>Grand Stay Hotel</h1>
+            <p>Guest Registration & Management System</p>
+        </header>
+        <main class="container">
+            <section class="form-section">
+                <h2 id="formTitle">Register a Guest</h2>
+                <form id="guestForm">
+                    <input type="hidden" id="editId">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" required placeholder="Enter full name">
+                        </div>
+                        <div class="form-group">
+                            <label for="mobile">Mobile Number</label>
+                            <input type="tel" id="mobile" required pattern="[0-9]{10}" maxlength="10" inputmode="numeric" placeholder="10-digit mobile number">
+                        </div>
+                        <div class="form-group">
+                            <label for="dob">Date of Birth</label>
+                            <input type="date" id="dob" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="city">City</label>
+                            <input type="text" id="city" required placeholder="Enter city">
+                        </div>
+                        <div class="form-group">
+                            <label for="state">State</label>
+                            <input type="text" id="state" required placeholder="Enter state">
+                        </div>
+                        <div class="form-group">
+                            <label for="country">Country</label>
+                            <input type="text" id="country" required placeholder="Enter country">
+                        </div>
+                        <div class="form-group">
+                            <label for="room">Room Number</label>
+                            <input type="number" id="room" required min="1" placeholder="Enter room number">
+                        </div>
+                        <div class="form-group">
+                            <label for="guests">Total Guests</label>
+                            <input type="number" id="guests" required min="1" placeholder="Number of guests">
+                        </div>
+                    </div>
+                    <div class="button-group">
+                        <button type="submit" id="submitBtn">Add Guest</button>
+                        <button type="reset" class="clear-btn" id="clearBtn">Clear Form</button>
+                    </div>
+                </form>
+            </section>
+            <section class="table-section">
+                <div class="table-heading">
+                    <h2>Guest Records</h2>
+                    <input type="search" id="searchInput" placeholder="Search guest records...">
+                </div>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Mobile</th>
+                                <th>Date of Birth</th>
+                                <th>City</th>
+                                <th>State</th>
+                                <th>Country</th>
+                                <th>Room No.</th>
+                                <th>Total Guests</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="guestTableBody"></tbody>
+                    </table>
+                </div>
+                <p id="recordCount">Total Records: 0</p>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2026 Grand Stay Hotel | Guest Management System</p>
+        </footer>
+        <script src="hotel_management_system.js"></script>
+    </body>
+</html>
