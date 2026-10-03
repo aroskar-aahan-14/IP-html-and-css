@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF - 8">
+        <meta name = "viewport" content = "width = device - width, initial - scale = 1">
+        <title>Math Calculator</title>
+        <script src = "math_calculator.js" defer></script>
+        <link rel = "stylesheet" href = "math_calculator.css">
+    </head>
+    <body>
+        <div class = "container">
+            <div class = "inp">
+                <h1>Simple Math Calculator</h1>
+                <label for = "num1">Number 1</label>
+                <input type = "number" step = "any" placeholder = "Enter first number" id = "num1">
+                <label for = "num2">Number 2</label>
+                <input type = "number" step = "any" placeholder = "Enter second number" id = "num2">
+            </div>
+            <div class = "btn">
+                <button onclick = "calculator('+')">Add</button>
+                <button onclick = "calculator('-')">Subtract</button>
+                <button onclick = "calculator('*')">Multiply</button>
+                <button onclick = "calculator('/')">Divide</button>
+            </div>
+            <h2 id = "result">Result will appear here</h2>
+        </div>
+    </body>
+</html>

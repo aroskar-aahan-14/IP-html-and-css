@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF - 8">
+        <meta name = "viewport" content = "width = device - width, initial - scale = 1.0">
+        <title>Student Registration</title>
+        <link rel = "stylesheet" href = "student_form.css">
+        <script src = "student_form.js" defer></script>
+    </head>
+    <body>
+        <header class = "header">
+            <h1>Student Registration Portal</h1>
+            <p>Register students and view their details</p>
+        </header>
+        <nav class = "navbar">
+            <a href = "#register">Registration</a>
+            <a href = "#students">Student List</a>
+        </nav>
+        <main class = "container">
+            <section class = "card" id = "register">
+                <h2>Student Registration Form</h2>
+                <form id = "registration">
+                    <label for = "name">Full Name</label>
+                    <input type = "text" id = "name" name = "name" placeholder = "Enter student name" required>
+                    <label for = "email">Email Address</label>
+                    <input type = "email" id = "email" name = "email" placeholder = "Enter email address" required>
+                    <label for = "course">Course</label>
+                    <select id = "course" name = "course" required>
+                        <option value = "">Select a course</option>
+                        <option value = "Artificial Intelligence & Data Science">Artificial Intelligence & Data Science</option>
+                        <option value = "Artificial Intelligence & Machine Learning">Artificial Intelligence & Machine Learning</option>
+                        <option value = "Information Technology">Information Technology</option>
+                        <option value = "Computer Engineering">Computer Engineering</option>
+                        <option value = "Electronics & Telecommunications">Electronics & Telecommunications</option>
+                        <option value = "Electronics & Computer Science">Electronics & Computer Science</option>
+                        <option value = "Mechanical Engineering">Mechanical Engineering</option>
+                        <option value = "Cyber Security">Cyber Security</option>
+                    </select>
+                    <button type = "submit">Register Student</button>
+                </form>
+                <p id = "message" role = "status" aria-live = "polite"></p>
+            </section>
+            <section class = "card" id = "students">
+                <h2>Registered Students</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Student ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Course</th>
+                        </tr>
+                    </thead>
+                    <tbody id = "studentTable">
+                    </tbody>
+                </table>
+            </section>
+        </main>
+        <footer class = "footer">
+            <p>&copy; 2026 Student Registration Portal</p>
+        </footer>
+    </body>
+</html>
